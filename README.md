@@ -116,3 +116,8 @@ NOTE: each API endpoint perfroms a validity check on the incoming parameters (fr
 - username: iliyan@mail.com password: gioco1
 - username: prof@mail.com password: gioco2
 - username: bot@mail.com password: gioco3
+
+---
+
+> Disclaimer
+The project was built and tested locally before uploading to GitHub. Therefore, the repository only has one commit, which contains the full project.
