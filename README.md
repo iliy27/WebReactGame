@@ -21,17 +21,26 @@ I designed a deck of at least 50 unique cards, each one with:
 
 Every card has a unique index, with a minimum gap of 0.5 between values, so no two cards are too close. For the theme of my deck, I chose travel and tourism, so all the horrible situations are related to that.
 
+
 **How the Game Works**
 
 The game starts by giving the player 3 random cards (fully revealed, including names, images, and indexes). Then, each round, the computer generates a new horrible situation card. The player sees the name and image of the new card, but not its index. The challenge: the player must guess where this new card fits into their current lineup of cards, based on the bad luck index. For example, if their cards are 1.5, 42.5, and 99, and they see the new situation, they might guess that it falls between 42.5 and 99. If the player places it correctly within 30 seconds, they win that card, and the full details (including the index) are revealed and added to their set. If they guess wrong or run out of time, the card is discarded and won’t appear again in that game. The game ends when: the player collects 6 cards → they win 🎉 OR they miss 3 rounds → they lose ❌. Between rounds, the game shows feedback (win/loss of the round) and waits for the player to confirm before moving on.
+
 
 **User Types**
 
 Registered users can play full games until completion (win or loss). They also get a personal game history in their profile. Anonymous visitors can only play a demo game (one round, starting with 3 cards). They also have access to the instructions page, but not game history.
 
+
 **End of Game & Replay**
 
 At the end of any game (full or demo), the app shows a summary of the player’s collected cards — with the situation names, images, and indexes revealed. From there, the player can easily start a new game.
+
+**Schreenshots of the app**
+
+<img width="1439" height="812" alt="Image" src="https://github.com/user-attachments/assets/153de95f-c962-4681-8eec-04188fa960c8" />
+<img width="1440" height="810" alt="Image" src="https://github.com/user-attachments/assets/ee2067e4-a7e5-453e-88fe-129ced52bb73" />
+<img width="1440" height="810" alt="Image" src="https://github.com/user-attachments/assets/fc49db1e-1f93-4841-842b-c3320e359e02" />
 
 ## React Client Application Routes
 
