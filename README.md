@@ -1,3 +1,38 @@
+# 🌟 Stuff Happens – A React Web Application Based on a Card Minigame
+This project is a React-based web application that I built to practice working with React concepts like components, state management, and hooks, while also experimenting with a simple client–server architecture.
+
+The game itself is a small card minigame inspired by Stuff Happens:
+- The frontend is built with React (JavaScript) to provide a clean and user-friendly interface.
+- The backend is a lightweight Express.js server with around 10 routes and a small SQLite database for storing and retrieving data.
+- The client and server communicate over JSON APIs.
+- Both are designed to run locally, with the client connecting to the server running on localhost.
+
+> NOTE: if you want to try the app, just clone the repo, install dependencies for both the client and the server, then start first the server and then, in a separate terminal, the client.
+
+This setup gave me the opportunity to practice full-stack development in a React + Express + SQLite stack, while building something interactive and fun.
+
+## Game Rules
+For this project, I’m building a web-based game where players face off against the computer in a series of rounds. The idea is simple but fun: each player collects a set of 6 cards, where every card represents a “horrible situation.”
+
+I designed a deck of at least 50 unique cards, each one with:
+- A title describing the situation (e.g., “your swimsuit slips off in a public pool” or “a shark attacks you and you lose a leg”)
+- A representative image
+- A bad luck index (from 1 = “not too bad” up to 100 = “why me?!”)
+
+Every card has a unique index, with a minimum gap of 0.5 between values, so no two cards are too close. For the theme of my deck, I chose travel and tourism, so all the horrible situations are related to that.
+
+**How the Game Works**
+
+The game starts by giving the player 3 random cards (fully revealed, including names, images, and indexes). Then, each round, the computer generates a new horrible situation card. The player sees the name and image of the new card, but not its index. The challenge: the player must guess where this new card fits into their current lineup of cards, based on the bad luck index. For example, if their cards are 1.5, 42.5, and 99, and they see the new situation, they might guess that it falls between 42.5 and 99. If the player places it correctly within 30 seconds, they win that card, and the full details (including the index) are revealed and added to their set. If they guess wrong or run out of time, the card is discarded and won’t appear again in that game. The game ends when: the player collects 6 cards → they win 🎉 OR they miss 3 rounds → they lose ❌. Between rounds, the game shows feedback (win/loss of the round) and waits for the player to confirm before moving on.
+
+**User Types**
+
+Registered users can play full games until completion (win or loss). They also get a personal game history in their profile. Anonymous visitors can only play a demo game (one round, starting with 3 cards). They also have access to the instructions page, but not game history.
+
+**End of Game & Replay**
+
+At the end of any game (full or demo), the app shows a summary of the player’s collected cards — with the situation names, images, and indexes revealed. From there, the player can easily start a new game.
+
 ## React Client Application Routes
 
 - Route `/`: home page for introduction to the website, depending on whether the user is authenticated or not, what is showed can change.
